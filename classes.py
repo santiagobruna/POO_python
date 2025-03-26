@@ -12,12 +12,13 @@ class JogadorValorant:
     def __str__(self):
         return f'Jogador: {self.name} | TagName: {self.tagName}'
 
+nome = input("Digite o nome do Jogador:")
+tag = input("Digite a tag do Jogador:")
+
 # Criando um jogador
-player1 = JogadorValorant('bru', '#1910')
+player1 = JogadorValorant(nome, tag)
 print(player1)
-player2 = JogadorValorant('exemplo', '#teste')
-print(player2)
 
 # Escolhendo Partida
-player1.escolher_partida('ranked')
-player2.escolher_partida('classic')
+modo = input("Escolha o modo de jogo: (ranked/classic)")
+player1.escolher_partida(modo)
